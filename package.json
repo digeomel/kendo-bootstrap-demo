@@ -1,0 +1,32 @@
+{
+  "name": "afis-kendo-bootstrap",
+  "version": "0.0.0",
+  "description": "AFIS Kendo UI + Bootstrap theme",
+  "main": "index.html",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digeomel/kendo-bootstrap-demo.git"
+  },
+  "keywords": [
+    "afis",
+    "kendo",
+    "bootstrap"
+  ],
+  "author": "Dimitris Geomelas dimitrios.geomelas@ext.ec.europa.eu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digeomel/kendo-bootstrap-demo/issues"
+  },
+  "homepage": "https://github.com/digeomel/kendo-bootstrap-demo#readme",
+  "devDependencies": {
+    "grunt": "latest",
+	"grunt-contrib-watch": "latest",
+    "grunt-contrib-concat": "latest",
+	"grunt-contrib-copy": "latest",
+	"grunt-contrib-uglify": "latest",
+	"grunt-sync": "latest"
+  }
+}
