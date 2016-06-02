@@ -8,26 +8,48 @@ module.exports = function(grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		watch: {
-			files: ['html/**'],
-			tasks: ['sync'],
 			options: {
 				debounceDelay: 1000
+			},
+			copyToApache: {
+				files: ['html/**'],
+				tasks: ['sync']
+			},
+			compileSass: {
+				files: ['afis/styles/**'],
+				tasks: ['sass']
 			}
 		},
 		sync: {
 			main: {
 				files: [{
-					cwd: 'html', src: '**', dest: '/exports/home/geomedi/htdocs/afis-kendo-bootstrap'
+					cwd: 'html',
+					src: '**',
+					dest: '/exports/home/geomedi/htdocs/afis-kendo-bootstrap'
 				}],
 				verbose: true,
 				failOnError: true,
 				updateAndDelete: true
 			}
+		},
+		sass: {
+			options: {
+				noCache: true,
+				debugInfo: true
+			},
+			dist: {
+				files: [{
+//					cwd: 'afis/styles',
+					src: 'afis/styles/afis.scss',
+					dest: 'html/styles/afis.css'
+				}]
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-sync');
 
-	grunt.registerTask('default', ['watch', 'sync']);
+	grunt.registerTask('default', ['watch', 'sass', 'sync']);
 };

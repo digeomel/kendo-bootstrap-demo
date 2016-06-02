@@ -27,6 +27,7 @@
     "grunt-contrib-concat": "latest",
 	"grunt-contrib-copy": "latest",
 	"grunt-contrib-uglify": "latest",
+	"grunt-contrib-sass": "latest",
 	"grunt-sync": "latest"
   }
 }

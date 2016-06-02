@@ -1,0 +1,23 @@
+/*
+ @file afis.scss
+ @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+ @since 02-Jun-2016
+ @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
+*/
+/*
+    Created on : 02-Jun-2016, 11:20:39
+    Author     : Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+*/
+/**
+ * @file _variables.scss
+ * @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+ * @since 02-Jun-2016
+ * @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/geomedi\/git_projects\/kendo-bootstrap-demo\/afis\/styles\/afis\.scss}line{font-family:\0000314}}
+.afis .k-button {
+  border: solid 1px #08479b;
+  border-radius: 5px;
+  color: #044da1; }
+
+/*# sourceMappingURL=afis.css.map */

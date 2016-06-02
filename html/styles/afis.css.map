@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;;;EAKE;AACF;;;EAGE;ACTF;;;;;GAKG;;ADQF,eAAU;EACT,MAAM,EAAE,iBAAiB;EACzB,aAAa,EAAE,GAAG;EAClB,KAAK,EAAE,OAAO",
+"sources": ["../../afis/styles/afis.scss","../../afis/styles/utils/_variables.scss"],
+"names": [],
+"file": "afis.css"
+}

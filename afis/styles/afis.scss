@@ -1,0 +1,19 @@
+/*
+ @file afis.scss
+ @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+ @since 02-Jun-2016
+ @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
+*/
+/*
+    Created on : 02-Jun-2016, 11:20:39
+    Author     : Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+*/
+@import "utils/_variables.scss";
+
+.afis {
+	.k-button {
+		border: solid 1px #08479b;
+		border-radius: 5px;
+		color: #044da1;
+	}
+}
