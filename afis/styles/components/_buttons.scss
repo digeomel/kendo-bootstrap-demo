@@ -1,0 +1,102 @@
+/**
+ * @file _buttons.scss.scss
+ * @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+ * @since 06-Jun-2016
+ * @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
+ * @see http://hugogiraudel.com/2014/05/05/bringing-configuration-objects-to-sass/
+ */
+
+$colors-button-primary: (
+	bg-normal: #044da1,
+	bg-hover: #022751,
+	bg-active: #022751,
+	bg-disabled: #e7e7e7,
+	fg-normal: #ffffff,
+	fg-hover: #ffffff,
+	fg-active: #ffffff,
+	fg-disabled: #d1d1d1,
+	border-normal: #044da1,
+	border-hover: #022751,
+	border-active: #022751,
+	border-disabled: #e7e7e7,
+	is-link: false
+);
+
+$colors-button-secondary: (
+	bg-normal: #ffffff,
+	bg-hover: #f0f0f0,
+	bg-active: #d4d4d4,
+	bg-disabled: #ffffff,
+	fg-normal: #044da1,
+	fg-hover: #044da1,
+	fg-active: #044da1,
+	fg-disabled: #d1d1d1,
+	border-normal: #08479b,
+	border-hover: #08479b,
+	border-active: #08479b,
+	border-disabled: #d1d1d1,
+	is-link: false
+);
+$colors-button-default: $colors-button-secondary;
+
+$colors-button-link: (
+	bg-normal: transparent,
+	bg-hover: transparent,
+	bg-active: transparent,
+	bg-disabled: transparent,
+	fg-normal: #08479b,
+	fg-hover: #08479b,
+	fg-active: #022751,
+	fg-disabled: #d1d1d1,
+	border-normal: transparent,
+	border-hover: transparent,
+	border-active: transparent,
+	border-disabled: transparent,
+	is-link: true
+);
+
+%afis-button-common {
+	border-radius: 4px;
+	font-weight: $afis-button-font-weight;
+}
+
+@mixin afis-button($colors: ()) {
+
+	$colors: map-merge($colors-button-default, $colors);
+	$is-link: map-get($colors, is-link);
+
+	@extend %afis-button-common;
+	color: map-get($colors, fg-normal);
+	background-color: map-get($colors, bg-normal);
+	border: 1px solid map-get($colors, border-normal);
+
+	&:hover, &.k-state-hover {
+		cursor: pointer;
+		color: map-get($colors, fg-hover);
+		background-color: map-get($colors, bg-hover);
+		border: 1px solid map-get($colors, border-hover);
+		@if $is-link {
+			text-decoration: underline;
+		}
+	}
+
+	&:active, &.k-state-active, &:focus:not(.k-state-disabled):not([disabled]), &:active:focus {
+		cursor: pointer;
+		color: map-get($colors, fg-active);
+		background-color: map-get($colors, bg-active);
+		border: 1px solid map-get($colors, border-active);
+		@if $is-link {
+			text-decoration: underline;
+			box-shadow: none;
+		}
+		@else {
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	&:disabled, &.k-state-disabled {
+		color: map-get($colors, fg-disabled);
+		background-color: map-get($colors, bg-disabled);
+		border: 1px solid map-get($colors, border-disabled);
+	}
+}

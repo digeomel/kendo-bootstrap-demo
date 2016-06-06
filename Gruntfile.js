@@ -35,7 +35,9 @@ module.exports = function(grunt) {
 		sass: {
 			options: {
 				noCache: true,
-				debugInfo: true
+				debugInfo: false,
+				sourcemap: false,
+				style: 'expanded'
 			},
 			dist: {
 				files: [{

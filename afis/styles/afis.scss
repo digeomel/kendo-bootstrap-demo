@@ -1,19 +1,21 @@
-/*
- @file afis.scss
- @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
- @since 02-Jun-2016
- @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
-*/
-/*
-    Created on : 02-Jun-2016, 11:20:39
-    Author     : Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
-*/
-@import "utils/_variables.scss";
+/**
+ * @file afis.scss
+ * @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+ * @since 02-Jun-2016
+ * @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
+ */
+@import "utils/_variables";
+@import "utils/_colors";
+@import "components/_buttons";
 
 .afis {
 	.k-button {
-		border: solid 1px #08479b;
-		border-radius: 5px;
-		color: #044da1;
+		@include afis-button($colors-button-secondary);
+	}
+	.k-button.is-primary {
+		@include afis-button($colors-button-primary);
+	}
+	.k-button.is-link {
+		@include afis-button($colors-button-link);
 	}
 }
