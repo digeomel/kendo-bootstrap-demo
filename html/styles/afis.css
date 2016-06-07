@@ -1,23 +1,103 @@
-/*
- @file afis.scss
- @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
- @since 02-Jun-2016
- @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
-*/
-/*
-    Created on : 02-Jun-2016, 11:20:39
-    Author     : Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
-*/
+/**
+ * @file afis.scss
+ * @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+ * @since 02-Jun-2016
+ * @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
+ */
 /**
  * @file _variables.scss
  * @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
  * @since 02-Jun-2016
  * @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/geomedi\/git_projects\/kendo-bootstrap-demo\/afis\/styles\/afis\.scss}line{font-family:\0000314}}
+/*
+ * @file _colors.scss
+ * @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+ * @since 06-Jun-2016
+ * @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
+*/
+/**
+ * @file _buttons.scss.scss
+ * @author Dimitrios Geomelas <dimitrios.geomelas@ext.ec.europa.eu>
+ * @since 06-Jun-2016
+ * @copyright European Anti-Fraud Office/Anti-Fraud Information System (OLAF/AFIS)
+ * @see http://hugogiraudel.com/2014/05/05/bringing-configuration-objects-to-sass/
+ */
+.afis .k-button, .afis .k-button.is-primary, .afis .k-button.is-link {
+  border-radius: 4px;
+  font-weight: 600;
+}
+
 .afis .k-button {
-  border: solid 1px #08479b;
-  border-radius: 5px;
-  color: #044da1; }
+  color: #044da1;
+  background-color: #ffffff;
+  border: 1px solid #08479b;
+}
+.afis .k-button:hover, .afis .k-button.k-state-hover {
+  cursor: pointer;
+  color: #044da1;
+  background-color: #f0f0f0;
+  border: 1px solid #08479b;
+}
+.afis .k-button:active, .afis .k-button.k-state-active, .afis .k-button:focus:not(.k-state-disabled):not([disabled]), .afis .k-button:active:focus {
+  cursor: pointer;
+  color: #044da1;
+  background-color: #d4d4d4;
+  border: 1px solid #08479b;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+.afis .k-button:disabled, .afis .k-button.k-state-disabled {
+  color: #d1d1d1;
+  background-color: #ffffff;
+  border: 1px solid #d1d1d1;
+}
+.afis .k-button.is-primary {
+  color: #ffffff;
+  background-color: #044da1;
+  border: 1px solid #044da1;
+}
+.afis .k-button.is-primary:hover, .afis .k-button.is-primary.k-state-hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #022751;
+  border: 1px solid #022751;
+}
+.afis .k-button.is-primary:active, .afis .k-button.is-primary.k-state-active, .afis .k-button.is-primary:focus:not(.k-state-disabled):not([disabled]), .afis .k-button.is-primary:active:focus {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #022751;
+  border: 1px solid #022751;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+.afis .k-button.is-primary:disabled, .afis .k-button.is-primary.k-state-disabled {
+  color: #d1d1d1;
+  background-color: #e7e7e7;
+  border: 1px solid #e7e7e7;
+}
+.afis .k-button.is-link {
+  color: #08479b;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+.afis .k-button.is-link:hover, .afis .k-button.is-link.k-state-hover {
+  cursor: pointer;
+  color: #08479b;
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-decoration: underline;
+}
+.afis .k-button.is-link:active, .afis .k-button.is-link.k-state-active, .afis .k-button.is-link:focus:not(.k-state-disabled):not([disabled]), .afis .k-button.is-link:active:focus {
+  cursor: pointer;
+  color: #022751;
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-decoration: underline;
+  box-shadow: none;
+}
+.afis .k-button.is-link:disabled, .afis .k-button.is-link.k-state-disabled {
+  color: #d1d1d1;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
 
 /*# sourceMappingURL=afis.css.map */

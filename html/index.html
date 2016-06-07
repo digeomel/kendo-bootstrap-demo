@@ -4,29 +4,27 @@
         <title>AFIS Kendo UI Bootstrap: Responsive demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="vendor/bootstrap.min.css" />
-        <link rel="stylesheet" href="http://cdn.kendostatic.com/2016.2.504/styles/kendo.common-bootstrap.min.css" />
-        <link rel="stylesheet" href="http://cdn.kendostatic.com/2016.2.504/styles/kendo.bootstrap.min.css" />
-
-        <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.dataviz.min.css" />
-        <link rel="stylesheet" href="http://cdn.kendostatic.com/2015.1.408/styles/kendo.dataviz.bootstrap.min.css" />
+        <link rel="stylesheet" href="styles/vendor/bootstrap-3.3.6/bootstrap.min.css" />
+        <link rel="stylesheet" href="styles/vendor/kendoui-2016.2.504/kendo.common-bootstrap.min.css" />
+        <link rel="stylesheet" href="styles/vendor/kendoui-2016.2.504/kendo.bootstrap.min.css" />
+        <link rel="stylesheet" href="styles/vendor/kendoui-2016.2.504/kendo.dataviz.min.css" />
+        <link rel="stylesheet" href="styles/vendor/kendoui-2016.2.504/kendo.dataviz.bootstrap.min.css" />
 
 		<link rel="stylesheet" href="styles/afis.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
 
-        <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
-        <script src="http://cdn.kendostatic.com/2016.2.504/js/kendo.all.min.js"></script>
-        <script src="http://cdn.kendostatic.com/2016.2.504/js/kendo.timezones.min.js"></script>
+        <script type="text/javascript" src="scripts/vendor/jquery-1.12.3.min.js"></script>
+        <script type="text/javascript" src="scripts/vendor/angular-1.2.16/angular.min.js"></script>
+        <script type="text/javascript" src="scripts/vendor/kendoui-2016.2.504/kendo.all.min.js"></script>
+        <script type="text/javascript" src="scripts/vendor/kendoui-2016.2.504/kendo.timezones.min.js"></script>
+
+        <script type="text/javascript" src="scripts/theme-chooser.js"></script>
 
 
-        <script src="theme-chooser.js"></script>
-
-        <link rel="stylesheet" href="styles.css" />
-
-        <!--[if lt IE 9]>
-        <script src="vendor/html5shiv.js"></script>
-        <script src="vendor/respond.min.js"></script>
-        <![endif]-->
+    <!--[if lt IE 9]>
+		<script type="text/javascript" src="scripts/vendor/html5shiv.js"></script>
+		<script type="text/javascript" src="scripts/vendor/respond.min.js"></script>
+    <![endif]-->
     </head>
     <body>
         <header>
@@ -208,6 +206,15 @@
                     <button class="k-button k-state-default is-primary">Update</button>
                 </div>
             </section>
+
+			<div>
+				<h4>Buttons with icons</h4>
+				<p>
+					<a id="iconTextButton">Filter</a>
+					<a id="kendoIconTextButton">Clear Filter</a>
+					<em id="iconButton"><span class="k-sprite">Refresh</span></em>
+				</p>
+			</div>
 
             <div id="orders" class="ra-section"></div>
 
@@ -909,6 +916,18 @@
                     "insertUnorderedList", "insertOrderedList", "indent", "outdent"
                 ]
             });
+
+			$("#iconTextButton").kendoButton({
+				spriteCssClass: "k-icon k-i-funnel"
+			});
+
+			$("#kendoIconTextButton").kendoButton({
+				icon: "funnel-clear"
+			});
+
+			$("#iconButton").kendoButton({
+				spriteCssClass: "k-icon k-i-refresh"
+			});
         </script>
     </body>
 </html>
